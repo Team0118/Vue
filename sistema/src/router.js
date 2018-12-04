@@ -11,6 +11,7 @@ import Login from './components/Login.vue'
 import Ingreso from './components/Ingreso.vue'
 import Venta from './components/Venta.vue'
 import store from './store'
+import ConsultaVentas from './components/ConsultaVentas.vue'
 
 Vue.use(Router)
 
@@ -87,6 +88,14 @@ var router = new Router({
       meta :{
         administrador :true,
         vendedor: true
+      }
+    },
+    {
+      path: '/consultaventas',
+      name: 'consultaventas',
+      component: ConsultaVentas,
+      meta :{
+        administrador :true
       }
     },
     {
