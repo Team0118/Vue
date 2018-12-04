@@ -6,6 +6,7 @@
         <blockquote>
           &#8220;Bienvenido a nuestro sistema&#8221;
           <footer>
+            asasas
           </footer>
         </blockquote>
       </v-layout>

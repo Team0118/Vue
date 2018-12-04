@@ -39,7 +39,7 @@
             </v-list-tile>
             <v-list-tile :to="{ name: 'articulos'}">
               <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
+                <v-icon>view_module</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>
@@ -61,7 +61,7 @@
             </v-list-tile>
             <v-list-tile :to="{ name: 'ingresos'}">
               <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
+                <v-icon>assignment_returned</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>
@@ -71,7 +71,7 @@
             </v-list-tile>
             <v-list-tile :to="{ name: 'proveedores'}">
               <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
+                <v-icon>assignment_ind</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>
@@ -93,7 +93,7 @@
             </v-list-tile>
             <v-list-tile :to="{ name: 'ventas'}">
               <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
+                <v-icon>shop_two</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>
@@ -103,7 +103,7 @@
             </v-list-tile>
             <v-list-tile :to="{ name: 'clientes'}">
               <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
+                <v-icon>supervisor_account</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>
@@ -125,7 +125,7 @@
             </v-list-tile>
             <v-list-tile :to="{ name: 'roles'}">
               <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
+                <v-icon>supervised_user_circle</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>
@@ -135,7 +135,7 @@
             </v-list-tile>
             <v-list-tile :to="{ name: 'usuarios'}">
               <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
+                <v-icon>account_circle</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>
@@ -157,21 +157,21 @@
             </v-list-tile>
             <v-list-tile :to="{ name: ''}">
               <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
+                <v-icon>list_alt</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>
-                  Consultas compras
+                  Consultas de compras
                 </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-list-tile :to="{ name: ''}">
               <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
+                <v-icon>insert_chart</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>
-                  Consultas ventas
+                  Consultas de ventas
                 </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
@@ -181,7 +181,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
-      color="blue darken-3"
+      color="#0DABA9"
       dark
       app
       :clipped-left="$vuetify.breakpoint.mdAndUp"
@@ -189,16 +189,17 @@
     >
       <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
         <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-        <span class="hidden-sm-and-down">Sistema</span>
+        <span class="hidden-sm-and-down"></span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn @click="salir" v-if="logueado" icon>
         <v-icon>logout</v-icon> Salir
       </v-btn>
-      <v-btn :to="{name: 'login'}" v-else>
+      <v-btn class="btnLogin" :to="{name: 'login'}" v-else>
         <v-icon>apps</v-icon> Login
       </v-btn>
     </v-toolbar>
+  
     <v-content>
       <v-container fluid fill-height>
         <v-slide-y-transition mode="out-in">
@@ -206,7 +207,7 @@
         </v-slide-y-transition>
       </v-container>
     </v-content>
-    <v-footer dark height="auto">
+    <!--<v-footer dark height="auto">
       <v-layout justify-center>
         <v-flex text-xs-center>
           <v-card flat tile color="primary" class="white--text">
@@ -215,10 +216,17 @@
           </v-card>
         </v-flex>
       </v-layout>
-    </v-footer>
+    </v-footer>-->
 
   </v-app>
 </template>
+
+<style>
+.btnLogin{
+  background: red;
+}
+
+</style>
 
 <script>
 
