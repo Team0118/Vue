@@ -5,9 +5,7 @@
         <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
         <blockquote>
           &#8220;Bienvenido a nuestro sistema&#8221;
-          <footer>
-            asasas
-          </footer>
+         
         </blockquote>
       </v-layout>
     </v-slide-y-transition>
